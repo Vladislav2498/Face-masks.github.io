@@ -1,354 +1,832 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Montserrat:wght@400;700&display=swap');
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Rubik:wght@500;700&display=swap');
 
-* {
-  max-width: 1200px;
+.global-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: linear-gradient(rgba(247, 253, 251, 0.8), rgba(247, 253, 251, 0.8)) top 3000px left/ auto 1614px no-repeat, url("./img/Vector (2).png") top 1965px right / auto no-repeat, url("./img/Vector (1).png") top 1000px left / auto no-repeat, linear-gradient(rgba(247, 253, 251, 0.8), rgba(247, 253, 251, 0.8)) top/ auto 1180px no-repeat, url("./img/delivery-of-goods-and-products-or-vaccine-in-coron-J7WFURP-min-scaled 1.png") top right /auto no-repeat;
+}
+
+.wrapper {
+  max-width: 1140px;
   margin: 0 auto;
 }
 
+//header
 
-// Here is what you get
+.header {
+  display: flex;
+  justify-content: space-between;
+}
 
-.what-you-get__header {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  text-align: center;
-  color: #8D81AC;
-  margin: 32px 47px 0 43px;
-;
+.header__block {
+  background-color: #c4c4c4;
+  width: 161px;
+  height: 40px;
+  margin-top: 24px;
+}
 
-  &::after {
-    content: ">";
+.header__menu-button img {
+  display: none;
+}
+
+.header__navigation-button {
+  display: none;
+}
+
+.header__navigation {
+
+  & ul {
+    display: flex;
+    margin-top: 40px;
+    justify-content: right;
+    gap: 45px;
+
+    & li:last-child a {
+      background-color: $blue;
+      padding: 15px 25px 15px 25px;
+      color: white;
+      border-radius: 8px;
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+    }
   }
 
-  &::before {
-    content: "<";
+  & a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: $grey;
+
+    &:hover {
+      color: $dark;
+    }
   }
 }
 
-.what-you-get__wrapper {
-  margin: 0 25px 0 25px;
+// Protective Face Masks
+
+.face-masks-main {
+  margin-top: 85px;
+  display: flex;
+  gap: 100px;
 }
 
-.what-you-get__content {
-  margin-top: 36px ;
+.face-masks-main__content {
+
+  margin-top: 170px;
+
+  & span {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: $accent;
+    font-size: 14px;
+  }
+
+  & h1 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 82px;
+    margin-top: 40px;
+  }
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $grey;
+  }
+
+  & a {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+}
+
+.face-masks-main__buttons {
+  margin-top: 70px;
+  display: flex;
+  gap: 20px;
+
+  .face-masks-main__button-shop {
+    background-color: $blue;
+    color: white;
+  }
+
+  .face-masks-main__button-learn {
+    border: 1px solid $accent;
+    color: $accent;
+  }
+}
+
+.face-masks-main__photo img {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.face-masks-main__services {
+  display: flex;
+  margin-top: 70px;
+  gap: 40px;
+}
+
+.face-masks-main__unit {
+  display: flex;
 
   & img {
     display: block;
-    margin: 0 auto 0 auto;
+    height: min-content;
+    margin-right: 22px;
+  }
+
+
+  & h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: $grey;
+  }
+}
+
+// Respirators
+
+.respirators {
+  margin-top: 80px;
+}
+
+.respirators__content {
+  display: flex;
+  gap: 47px;
+  margin-bottom: 70px;
+
+  .respirators__banner img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  & h2 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $grey;
+    margin-top: 30px;
+
+    & span {
+      font-weight: bold;
+    }
+  }
+}
+
+.respirators__information {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row: 3;
+}
+
+.respirators__img-block {
+  background-image: url("./img/Health Pro N95_factory 1 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  position: relative;
+
+  & .respirators__img-paragraph {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: white;
+    background: $blue;
+    padding: 70px 50px 70px 30px;
+    max-width: 205px;
+  }
+}
+
+.respirators__white-block {
+  background-color: #FFFFff;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: $grey;
+  padding: 80px 30px 132px 30px;
+}
+
+.respirators__blue-block {
+  background-color: $blue;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: white;
+  padding: 80px 30px 132px 30px;
+}
+
+.respirators__contacts {
+  background-color: $accent;
+  padding: 45px 40px 50px 40px;
+  grid-column: 3/5;
+  grid-row: 2/3;
+
+  & h3 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 50px;
+  }
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: black;
+  }
+}
+
+.respirators-footer {
+  margin-top: 55px;
+  display: flex;
+}
+
+
+.respirators__button-learn-more {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 15px 25px 15px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid $blue;
+  color: $blue;
+
+}
+
+.respirators__phone {
+  display: flex;
+
+  &::before {
+    content: "";
+    border-right: 1px solid white;
+    height: 45px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+.respirators__phone-number {
+  display: grid;
+  margin-left: 15px;
+
+  & span {
+    color: $blue;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  & a {
+    text-decoration: none;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+// certification
+
+.certification {
+  margin-top: 80px;
+  display: flex;
+  gap: 100px;
+  align-items: center;
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: $grey;
+    display: inline;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      border-bottom: 1px solid $accent;
+      width: 147px;
+      margin-left: 15px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+// choose our products
+
+.choose-our-products {
+  margin-top: 80px;
+  display: flex;
+  gap: 90px;
+}
+
+.choose-our-products__banner img {
+  display: block;
+  margin: auto;
+}
+
+.choose-our-products__content {
+  & h2 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  & .choose-our-products__paragraph {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $grey;
+    margin-top: 40px;
+  }
+}
+
+.choose-our-products__blocks {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.choose-our-products__unit {
+  display: flex;
+
+  & .fa-solid {
+    display: block;
+    height: 56px;
+    min-width: 56px;
+    text-align: center;
+    line-height: 56px;
+    background: $blue;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    margin-right: 20px;
   }
 
   & h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    color: #323232;
-    margin-top: 24px;
-    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   & p {
-    margin-top: 14px;
-    font-family: "Lato", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
     font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    color:#848E97;
-    line-height: 21px;
-    display: block;
+    line-height: 22px;
+    text-align: left;
+
   }
 }
 
-.what-you-get__banner {
-  margin: 70px 0 0 25px;
-  background-image: url("../../dist/img/editor 1.png");
-  background-size: 160%;
-  background-repeat: no-repeat;
-  height: 380px;
-}
+// Get One Step Ahead Of Disease
 
-// People Are Talking About Fork
+.one-step {
 
-.people-talking {
-  padding: 57px 40px 20px 40px;
-  background-image: url("../../dist/img/testmonials-bg 2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  &::after {
-    display: block;
-    margin-top: 25px;
-    content: "";
-    height: 4px;
-    border-top: 2px solid #645766;
-  }
-}
-
-.people-talking__header {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 36px;
+  margin-top: 100px;
   text-align: center;
-  color: white;
-  line-height: 48px;
+
+  & h2 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  & p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 70px;
+  }
+
+  & a {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: $blue;
+    color: white;
+    display: inline-block;
+    margin: 40px auto 0 auto;
+  }
 }
 
-.people-talking__content {
-  margin-top: 45px;
+// footer
 
-  & img {
-    display: block;
+.footer__contacts {
+  background-color: $accent;
+  margin-top: 120px;
+
+  & .footer__contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 50px 0;
+    max-width: 1140px;
     margin: 0 auto;
   }
 
-  & p {
-    margin-top: 20px;
-    font-family: "Lato", sans-serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 16px;
-    text-align: center;
-    color: white;
-    line-height: 24px;
-  }
-}
-
-.people-talking__last-paragraph {
-  margin-top: 35px ;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  text-align: center;
-  color: #A291A5;
-  line-height: 21px;
-}
-
-//Fork Subscription Pricing
-
-.subscription-pricing {
-  padding-top: 15px;
-  background-image: url("../../dist/img/base 3 (1).png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 50px;
-}
-
-.subscription-pricing__header {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  text-align: center;
-  color: white;
-  line-height: 42px;
-  margin: 0 20px 0 20px;
-}
-
-.subscription-pricing__content {
-  margin: 20px 32px 0 32px;
-  background: rgba(255, 255, 255, 11%);
-  padding-bottom: 36px;
-
-
-  & .subscription-pricing__rate {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 24px;
-    text-align: center;
-    color: white;
-    line-height: 24px;
-    background-color:
-            rgba(255, 255, 255, 6%);
-    padding-top: 36px;
-    padding-bottom: 36px;
-  }
-
-  & .subscription-pricing__price {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 60px;
-    line-height: 62px;
-    color: white;
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  & .subscription-pricing__period {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 16px;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-
-    &::after {
-      display: block;
-      margin: 38px auto 0 auto;
-      content: "";
-      height: 5px;
-      border-top: 5px solid #8D81AC;
-      width: 60px;
-    }
-  }
-
-  & .subscription-pricing__terms {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    color: white;
-    text-align: center;
-    margin: 30px 20px 0 20px;
-  }
-
-  & .subscription-pricing__button {
-    background: rgba(255, 255, 255, 15%);
-    color: white;
-    text-decoration: none;
-    width: 163px;
-    height: 45px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 15px;
+  & .footer__contacts-unit {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 37px auto 0 auto;
+  }
+
+  & .footer__line {
+    width: 1px;
+    background-color: #FFFFff;
+  }
+
+  & img {
+    height: min-content;
+    margin-right: 15px;
+    display: block;
+  }
+
+  & p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  & a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 15px;
+    color: black;
   }
 }
 
-.subscription-pricing__content.active {
-  margin: 20px 10px 0 10px;
-  background: rgba(70, 48, 72, 84%);
-  padding-bottom: 36px;
+.footer__info {
+  background-color: #ecf0f5;
+  padding-top: 75px;
 
-  & .subscription-pricing__rate {
-     background: rgba(0, 0, 0, 11%);
-  }
-
-  & .subscription-pricing__price {
-    font-size: 82px;
-  }
-
-  & .subscription-pricing__button {
-    margin-top: 83px;
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #E1E6EC;
+    margin-top: 70px;
   }
 }
 
-@media (min-width: 480px) {
+.footer__wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 
-  // Here is what you get
-
-  .what-you-get__header {
-    font-size: 42px;
+  & nav p {
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 12px;
   }
 
-  .what-you-get__wrapper {
-    margin: 0 30px 0 30px;
-  }
+  & nav a {
+    text-decoration: none;
+    color: $grey;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
 
-  .what-you-get__content {
-    display: grid;
-    grid-template-areas:
-            "image header"
-            "image paragraph";
-
-    & .what-you-get__pictures {
-      grid-area: image;
-      width: 111px;
-      margin-right: 25px;
+    &:hover {
+      color: $blue;
     }
 
-    & h3 {
-      grid-area: header;
-      margin-top: 0;
-      text-align: left;
+    & i {
+      margin-right: 5px;
+      color: $blue;
+    }
+  }
+}
+
+.footer__paragraph {
+  max-width: 340px;
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+  }
+}
+
+.footer__block {
+  width: 161px;
+  height: 40px;
+  background-color: #c4c4c4;
+  margin-bottom: 35px;
+}
+
+.footer__copyright {
+  background-color: #ecf0f5;
+  text-align: center;
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 32px 0 32px 0;
+  }
+}
+
+@media (max-width: 1160px) {
+
+  .global-wrapper {
+    padding: 0 15px 0 15px;
+  }
+
+  // header
+
+  .header__navigation {
+    display: none;
+  }
+
+  .header__menu-button {
+    background: black;
+    width: 44px;
+    height: 37px;
+    margin: 23px 0 23px auto;
+
+    img {
+      display: inline;
+    }
+  }
+
+  .header__navigation-button {
+    display: none;
+    width: 182px;
+    background-color: white;
+    position: absolute;
+    right: 28px;
+    top: 60px;
+
+
+    & li {
+      padding: 7px 0 7px 10px;
+    }
+
+    & li:hover {
+      background-color: #e5e5e5
+    }
+
+    & a {
+      text-decoration: none;
+      color: $grey;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  .show {
+    display: block;
+  }
+
+  // face-masks
+
+  .face-masks-main {
+    display: block;
+  }
+
+  .face-masks-main__content {
+
+    margin: -80px auto 0 auto;
+
+    & h1 {
+      font-size: 50px;
+      line-height: 55px;
+      text-align: center;
     }
 
     & p {
-      grid-area: paragraph;
-      text-align: left;
+      margin-top: 20px;
     }
   }
 
-  .what-you-get__banner {
-    margin: 70px 0 0 70px;
-    background-image: url("../../dist/img/editor 1.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 519px;
+  .face-masks-main__buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
   }
 
-  //Fork Subscription Pricing
+  .face-masks-main__photo {
 
-  .subscription-pricing {
-    padding-top: 88px;
-    background-image: url("../../dist/img/Layer 2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 50px;
+    img {
+      height: auto;
+      width: 100%;
+      display: block;
+      margin: 40px auto 0 auto;
+    }
   }
 
-  .subscription-pricing__header {
-    font-size: 42px;
-    line-height: 44px;
+  .face-masks-main__services {
+    display: block;
+
+    & .face-masks-main__unit {
+      margin-top: 20px;
+    }
   }
 
-  .subscription-pricing__wrapper {
-    margin-right: 5%;
-    margin-left: 5%;
+  .respirators__content {
+    display: block;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+
+    & h2 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    & p {
+      text-align: center;
+    }
+  }
+
+  .respirators__information {
+    display: block;
+
+    & .respirators__img-block {
+      background: none;
+    }
+
+    & .respirators__img-paragraph {
+      position: unset;
+      background: #1B5FC1;
+      padding: 40px;
+
+      & p {
+        display: inline;
+        padding: 0;
+      }
+    }
+  }
+
+  .respirators__contacts {
+
+    h3 {
+      line-height: 30px;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .respirators-footer {
+    display: block;
+
+    a {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .respirators__contacts {
+    text-align: center;
+
+    .respirators__phone-number {
+      margin: 0 auto;
+
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .respirators__phone {
+    margin-top: 40px;
+  }
+
+  .respirators__phone::before {
+    display: none;
+  }
+
+  .certification {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 25px;
+    grid-row: auto;
+    justify-items: center;
+    gap: 30px;
   }
 
-  .subscription-pricing__content {
-    margin: 40px 0 0 0;
+  .choose-our-products {
+    display: block;
   }
 
-
-}
-
-@media (min-width: 993px) {
-
-  // Here is what you get
-
-  .what-you-get {
-    padding-top: 95px;
-    padding-bottom: 30px;
-    background-color: #f4f4f4;
-    display: grid;
-    grid-template-areas:
-              "content header"
-              "content banner";
+  .choose-our-products__banner img {
+    height: auto;
+    width: 100%;
   }
 
-  .what-you-get__header {
-    grid-area: header;
-    margin: 0;
+  .choose-our-products__content {
+
+    margin-top: 40px;
+
+    h2 {
+      text-align: center;
+      font-size: 40px;
+    }
+
+    p {
+      text-align: center;
+    }
   }
 
-  .what-you-get__wrapper {
-    grid-area: content;
+  .choose-our-products__blocks {
+    display: block;
 
+    .choose-our-products__unit {
+      margin-bottom: 20px;
+    }
   }
 
-  .what-you-get__content:first-child {
-    margin-top: 0;
+  .footer__contacts-wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
   }
 
-  .what-you-get__banner {
-    grid-area: banner;
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .footer__navigation {
     margin-top: 30px;
-    margin-left: 10px;
   }
-}
 
+  .footer__media {
+    margin-top: 30px;
+  }
+
+}
