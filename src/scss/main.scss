@@ -1,0 +1,832 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Rubik:wght@500;700&display=swap');
+
+.global-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: linear-gradient(rgba(247, 253, 251, 0.8), rgba(247, 253, 251, 0.8)) top 3000px left/ auto 1614px no-repeat, url("./img/Vector (2).png") top 1965px right / auto no-repeat, url("./img/Vector (1).png") top 1000px left / auto no-repeat, linear-gradient(rgba(247, 253, 251, 0.8), rgba(247, 253, 251, 0.8)) top/ auto 1180px no-repeat, url("./img/delivery-of-goods-and-products-or-vaccine-in-coron-J7WFURP-min-scaled 1.png") top right /auto no-repeat;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+//header
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__block {
+  background-color: #c4c4c4;
+  width: 161px;
+  height: 40px;
+  margin-top: 24px;
+}
+
+.header__menu-button img {
+  display: none;
+}
+
+.header__navigation-button {
+  display: none;
+}
+
+.header__navigation {
+
+  & ul {
+    display: flex;
+    margin-top: 40px;
+    justify-content: right;
+    gap: 45px;
+
+    & li:last-child a {
+      background-color: $blue;
+      padding: 15px 25px 15px 25px;
+      color: white;
+      border-radius: 8px;
+      font-family: "Rubik", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: $grey;
+
+    &:hover {
+      color: $dark;
+    }
+  }
+}
+
+// Protective Face Masks
+
+.face-masks-main {
+  margin-top: 85px;
+  display: flex;
+  gap: 100px;
+}
+
+.face-masks-main__content {
+
+  margin-top: 170px;
+
+  & span {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: $accent;
+    font-size: 14px;
+  }
+
+  & h1 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 82px;
+    margin-top: 40px;
+  }
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $grey;
+  }
+
+  & a {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+}
+
+.face-masks-main__buttons {
+  margin-top: 70px;
+  display: flex;
+  gap: 20px;
+
+  .face-masks-main__button-shop {
+    background-color: $blue;
+    color: white;
+  }
+
+  .face-masks-main__button-learn {
+    border: 1px solid $accent;
+    color: $accent;
+  }
+}
+
+.face-masks-main__photo img {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.face-masks-main__services {
+  display: flex;
+  margin-top: 70px;
+  gap: 40px;
+}
+
+.face-masks-main__unit {
+  display: flex;
+
+  & img {
+    display: block;
+    height: min-content;
+    margin-right: 22px;
+  }
+
+
+  & h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: $grey;
+  }
+}
+
+// Respirators
+
+.respirators {
+  margin-top: 80px;
+}
+
+.respirators__content {
+  display: flex;
+  gap: 47px;
+  margin-bottom: 70px;
+
+  .respirators__banner img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  & h2 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $grey;
+    margin-top: 30px;
+
+    & span {
+      font-weight: bold;
+    }
+  }
+}
+
+.respirators__information {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row: 3;
+}
+
+.respirators__img-block {
+  background-image: url("./img/Health Pro N95_factory 1 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  position: relative;
+
+  & .respirators__img-paragraph {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: white;
+    background: $blue;
+    padding: 70px 50px 70px 30px;
+    max-width: 205px;
+  }
+}
+
+.respirators__white-block {
+  background-color: #FFFFff;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: $grey;
+  padding: 80px 30px 132px 30px;
+}
+
+.respirators__blue-block {
+  background-color: $blue;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: white;
+  padding: 80px 30px 132px 30px;
+}
+
+.respirators__contacts {
+  background-color: $accent;
+  padding: 45px 40px 50px 40px;
+  grid-column: 3/5;
+  grid-row: 2/3;
+
+  & h3 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 50px;
+  }
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: black;
+  }
+}
+
+.respirators-footer {
+  margin-top: 55px;
+  display: flex;
+}
+
+
+.respirators__button-learn-more {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 15px 25px 15px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid $blue;
+  color: $blue;
+
+}
+
+.respirators__phone {
+  display: flex;
+
+  &::before {
+    content: "";
+    border-right: 1px solid white;
+    height: 45px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+.respirators__phone-number {
+  display: grid;
+  margin-left: 15px;
+
+  & span {
+    color: $blue;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  & a {
+    text-decoration: none;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+// certification
+
+.certification {
+  margin-top: 80px;
+  display: flex;
+  gap: 100px;
+  align-items: center;
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: $grey;
+    display: inline;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      border-bottom: 1px solid $accent;
+      width: 147px;
+      margin-left: 15px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+// choose our products
+
+.choose-our-products {
+  margin-top: 80px;
+  display: flex;
+  gap: 90px;
+}
+
+.choose-our-products__banner img {
+  display: block;
+  margin: auto;
+}
+
+.choose-our-products__content {
+  & h2 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  & .choose-our-products__paragraph {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $grey;
+    margin-top: 40px;
+  }
+}
+
+.choose-our-products__blocks {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.choose-our-products__unit {
+  display: flex;
+
+  & .fa-solid {
+    display: block;
+    height: 56px;
+    min-width: 56px;
+    text-align: center;
+    line-height: 56px;
+    background: $blue;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    margin-right: 20px;
+  }
+
+  & h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  & p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+
+  }
+}
+
+// Get One Step Ahead Of Disease
+
+.one-step {
+
+  margin-top: 100px;
+  text-align: center;
+
+  & h2 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  & p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 70px;
+  }
+
+  & a {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: $blue;
+    color: white;
+    display: inline-block;
+    margin: 40px auto 0 auto;
+  }
+}
+
+// footer
+
+.footer__contacts {
+  background-color: $accent;
+  margin-top: 120px;
+
+  & .footer__contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 50px 0;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  & .footer__contacts-unit {
+    display: flex;
+  }
+
+  & .footer__line {
+    width: 1px;
+    background-color: #FFFFff;
+  }
+
+  & img {
+    height: min-content;
+    margin-right: 15px;
+    display: block;
+  }
+
+  & p {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  & a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 15px;
+    color: black;
+  }
+}
+
+.footer__info {
+  background-color: #ecf0f5;
+  padding-top: 75px;
+
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #E1E6EC;
+    margin-top: 70px;
+  }
+}
+
+.footer__wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  & nav p {
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+  & nav a {
+    text-decoration: none;
+    color: $grey;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+
+    &:hover {
+      color: $blue;
+    }
+
+    & i {
+      margin-right: 5px;
+      color: $blue;
+    }
+  }
+}
+
+.footer__paragraph {
+  max-width: 340px;
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+  }
+}
+
+.footer__block {
+  width: 161px;
+  height: 40px;
+  background-color: #c4c4c4;
+  margin-bottom: 35px;
+}
+
+.footer__copyright {
+  background-color: #ecf0f5;
+  text-align: center;
+
+  & p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 32px 0 32px 0;
+  }
+}
+
+@media (max-width: 1160px) {
+
+  .global-wrapper {
+    padding: 0 15px 0 15px;
+  }
+
+  // header
+
+  .header__navigation {
+    display: none;
+  }
+
+  .header__menu-button {
+    background: black;
+    width: 44px;
+    height: 37px;
+    margin: 23px 0 23px auto;
+
+    img {
+      display: inline;
+    }
+  }
+
+  .header__navigation-button {
+    display: none;
+    width: 182px;
+    background-color: white;
+    position: absolute;
+    right: 28px;
+    top: 60px;
+
+
+    & li {
+      padding: 7px 0 7px 10px;
+    }
+
+    & li:hover {
+      background-color: #e5e5e5
+    }
+
+    & a {
+      text-decoration: none;
+      color: $grey;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  .show {
+    display: block;
+  }
+
+  // face-masks
+
+  .face-masks-main {
+    display: block;
+  }
+
+  .face-masks-main__content {
+
+    margin: -80px auto 0 auto;
+
+    & h1 {
+      font-size: 50px;
+      line-height: 55px;
+      text-align: center;
+    }
+
+    & p {
+      margin-top: 20px;
+    }
+  }
+
+  .face-masks-main__buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .face-masks-main__photo {
+
+    img {
+      height: auto;
+      width: 100%;
+      display: block;
+      margin: 40px auto 0 auto;
+    }
+  }
+
+  .face-masks-main__services {
+    display: block;
+
+    & .face-masks-main__unit {
+      margin-top: 20px;
+    }
+  }
+
+  .respirators__content {
+    display: block;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+
+    & h2 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    & p {
+      text-align: center;
+    }
+  }
+
+  .respirators__information {
+    display: block;
+
+    & .respirators__img-block {
+      background: none;
+    }
+
+    & .respirators__img-paragraph {
+      position: unset;
+      background: #1B5FC1;
+      padding: 40px;
+
+      & p {
+        display: inline;
+        padding: 0;
+      }
+    }
+  }
+
+  .respirators__contacts {
+
+    h3 {
+      line-height: 30px;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .respirators-footer {
+    display: block;
+
+    a {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .respirators__contacts {
+    text-align: center;
+
+    .respirators__phone-number {
+      margin: 0 auto;
+
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .respirators__phone {
+    margin-top: 40px;
+  }
+
+  .respirators__phone::before {
+    display: none;
+  }
+
+  .certification {
+    display: grid;
+    grid-row: auto;
+    justify-items: center;
+    gap: 30px;
+  }
+
+  .choose-our-products {
+    display: block;
+  }
+
+  .choose-our-products__banner img {
+    height: auto;
+    width: 100%;
+  }
+
+  .choose-our-products__content {
+
+    margin-top: 40px;
+
+    h2 {
+      text-align: center;
+      font-size: 40px;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .choose-our-products__blocks {
+    display: block;
+
+    .choose-our-products__unit {
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer__contacts-wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .footer__navigation {
+    margin-top: 30px;
+  }
+
+  .footer__media {
+    margin-top: 30px;
+  }
+
+}
